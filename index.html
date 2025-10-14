@@ -121,106 +121,99 @@
             line-height: 1.3;
         }
 
-        .pair {
-            height: 200vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .bloodletting {
+            filter: blur(var(--blur)) url(#svgThreshold);
         }
 
         section {
-            position: sticky;
-            top: 1rem;
-            height: 100vh;
-        }
-
-        aside {
-            color: #666;
-            width: 20vw;
+            display: grid;
+            grid-template-columns: [context] 20vw [poem] 100%;
             margin-left: -20vw;
-            height: 100vh;
         }
 
-        .bloodletting {
-            filter: blur(var(--blur)) url(#svgThreshold);
+        section > aside {
+            color: #666;
+            position: relative;
+            top: 100vh;
+        }
+
+        section > p {
+            grid-column-start: poem;
+            position: sticky;
+            top: 0;
+        }
+
+        section::after {
+            grid-column-start: poem;
+            content: "";
+            display: block;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
     <main>
         <h1 class="bloodletting small">A Midsummer Night's Dream</h1>
-        <div class="pair">
-            <section class="bloodletting">
-                <p>
-                    sometimes, I wonder
-                </p>
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-            </section>
+        <section>
             <aside>
                 <h2>Context</h2>
                 <p>
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
-        </div>
-        <div class="pair">
-            <section class="bloodletting">
-                <p>
-                    sometimes, I wonder
-                </p>
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-
-                <p>
-                    sometimes, I wonder
-                </p>
-            </section>
+            <p class="bloodletting">
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+                sometimes, I wonder<br/>
+            </p>
+        </section>
+        <section>
             <aside>
                 <h2>Context</h2>
                 <p>
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
-        </div>
+            <p class="bloodletting">
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+                I really do<br/>
+            </p>
+        </section>
     </main>
 
     <svg xmlns="http://www.w3.org/2000/svg">
