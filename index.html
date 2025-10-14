@@ -167,8 +167,8 @@
         }
 
         body {
-            margin-left:auto;
-            margin-right:auto;
+            margin-left: auto;
+            margin-right: auto;
             width: 100%;
             max-width: 1000px;
             min-height: 100%;
@@ -178,13 +178,13 @@
             font-family: valkyrie-text, serif;
             line-height: 1.45;
             /* font-size: 0.91rem; */
-            font-size: 16pt;
+            font-size: 21.84px;
             font-variant-numeric: oldstyle-nums;
         }
 
         main {
             padding: 3rem 0 6rem 0;
-            margin-left: 12rem;
+            margin-left: 18rem;
             margin-right: 2.5rem;
         }
 
@@ -199,7 +199,7 @@
             line-height: 1.1;
             margin-top: 1rem;
             margin-bottom: 2rem;
-            border-top: 1px solid #666;
+            border-top: 1px solid;
             padding-top: 0.02em;
             hyphens: none;
         }
@@ -243,7 +243,20 @@
         }
 
         aside {
-            color: #666;
+            font-family: heliotrope-text;
+            font-size: 19.92px;
+            line-height: 1.4;
+            color: #667;
+            letter-spacing: 0.015em;
+            hyphens: none;
+            font-feature-settings: "liga";
+        }
+
+        run-in {
+            font-weight: bold;
+            text-transform: lowercase;
+            padding-right: 0.4em;
+            font-family: heliotrope-caps;
         }
 
         section {
@@ -271,10 +284,11 @@
             main {
                 padding-bottom: 18rem;
             }
+
             section {
                 display: grid;
-                grid-template-columns: [context] 20vw [poem] 1fr;
-                margin-left: -20vw;
+                grid-template-columns: [context] 240px [poem] 1fr;
+                margin-left: -240px;
             }
 
             section > * {
@@ -284,15 +298,20 @@
             section > aside {
                 order: -1;
                 grid-column-start: context;
-                width: 20vw;
+                width: 240px;
                 position: relative;
-                top: calc(100vh - 14pt);
+                top: 100vh;
+            }
+
+            aside > p {
+                margin-top: 0.3rem;
                 padding-right: 2em;
+                text-align: right;
             }
 
             section > p {
                 position: sticky;
-                top: 14pt;
+                top: 0.7rem;
             }
 
             section::after {
@@ -338,8 +357,8 @@
                 sometimes, I wonder<br/>
             </p>
             <aside>
-                <h2>Context</h2>
                 <p>
+                    <run-in>Context</run-in>
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
@@ -368,8 +387,8 @@
                 I really do<br/>
             </p>
             <aside>
-                <h2>Context</h2>
                 <p>
+                    <run-in>Context</run-in>
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
