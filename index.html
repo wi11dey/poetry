@@ -207,7 +207,7 @@
 </head>
 <body>
     <main>
-        <h1 class="bloodletting small">A Midsummer Night's Dream</h1>
+        <h1 id="title" class="bloodletting small">A Midsummer Night's Dream</h1>
         <section>
             <p class="bloodletting">
                 sometimes, I wonder<br/>
@@ -284,15 +284,17 @@
         </filter>
     </svg>
 
-    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script type="module">
+        import { animate, scroll, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm"
 
-    <script>
-        const { animate, scroll, inView } = Motion
-
-        inView(".bloodletting", async element => {
+        const bloodlet = async element => {
             await animate(element, { "--blur": ["3px", "0px"] }, { duration: 1, ease: "linear" })
             element.style.filter = "none"
-        })
+        }
+
+        await bloodlet(document.getElementById("title"))
+
+        inView("p.bloodletting", bloodlet)
     </script>
 </body>
 </html>
