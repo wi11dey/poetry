@@ -121,6 +121,14 @@
             line-height: 1.3;
         }
 
+        p {
+            line-height: 1.7;
+        }
+
+        :root {
+            --blur: 3px;
+        }
+
         .bloodletting {
             filter: blur(var(--blur)) url(#svgThreshold);
         }
@@ -131,14 +139,18 @@
             margin-left: -20vw;
         }
 
+        section > * {
+            grid-column-start: poem;
+        }
+
         section > aside {
+            grid-column-start: context;
             color: #666;
             position: relative;
             top: 100vh;
         }
 
         section > p {
-            grid-column-start: poem;
             position: sticky;
             top: 0;
         }
@@ -230,9 +242,9 @@
         const { animate, scroll, inView } = Motion
 
         inView(".bloodletting", async element => {
-            await animate(element, { "--blur": ["3px", "0px"] }, { duration: 1.5, ease: "linear" })
+            await animate(element, { "--blur": ["3px", "0px"] }, { duration: 1, ease: "linear" })
             element.style.filter = "none"
-        }, { amount: "all" })
+        })
     </script>
 </body>
 </html>
