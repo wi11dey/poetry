@@ -243,13 +243,17 @@
         }
 
         aside {
-            font-family: heliotrope-text;
+            color: #667;
+            /* font-family: heliotrope-text;
             font-size: 19.92px;
             line-height: 1.4;
-            color: #667;
             letter-spacing: 0.015em;
             hyphens: none;
-            font-feature-settings: "liga";
+            font-feature-settings: "liga"; */
+        }
+
+        aside p {
+            font-size: 90%;
         }
 
         run-in {
@@ -287,8 +291,8 @@
 
             section {
                 display: grid;
-                grid-template-columns: [context] 240px [poem] 1fr;
-                margin-left: -240px;
+                grid-template-columns: [context] 400px [poem] 1fr;
+                margin-left: -400px;
             }
 
             section > * {
@@ -298,15 +302,22 @@
             section > aside {
                 order: -1;
                 grid-column-start: context;
-                width: 240px;
+                width: 400px;
                 position: relative;
                 top: 100vh;
             }
 
+            aside {
+                padding-top: 0.3rem;
+            }
+
+            aside > h2 {
+                margin-top: 0;
+            }
+
             aside > p {
-                margin-top: 0.3rem;
                 padding-right: 2em;
-                text-align: right;
+                /* text-align: right; */
             }
 
             section > p {
@@ -357,8 +368,9 @@
                 sometimes, I wonder<br/>
             </p>
             <aside>
+                <h2>Context</h2>
                 <p>
-                    <run-in>Context</run-in>
+                    <!-- <run-in>Context</run-in> -->
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
@@ -387,8 +399,9 @@
                 I really do<br/>
             </p>
             <aside>
+                <h2>Context</h2>
                 <p>
-                    <run-in>Context</run-in>
+                    <!-- <run-in>Context</run-in> -->
                     Sometimes, I'll be wondering.
                 </p>
             </aside>
